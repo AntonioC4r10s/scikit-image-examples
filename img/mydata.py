@@ -26,3 +26,8 @@ def neymar():
 def hollywood():
     img = io.imread(root + 'hollywood.jpg')
     return img
+
+
+def elvis():
+    img = io.imread(root + 'elvis.jpg')
+    return img
