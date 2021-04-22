@@ -31,3 +31,11 @@ def hollywood():
 def elvis():
     img = io.imread(root + 'elvis.jpg')
     return img
+
+
+def lion():
+    return io.imread(root + 'lion-3d.png')
+
+
+def retina():
+    return io.imread(root + 'retina.jpg')
