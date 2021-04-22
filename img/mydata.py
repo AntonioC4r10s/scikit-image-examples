@@ -39,3 +39,7 @@ def lion():
 
 def retina():
     return io.imread(root + 'retina.jpg')
+
+
+def devil():
+    return io.imread(root + 'devil.png')
