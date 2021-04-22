@@ -1,5 +1,5 @@
 # scikit-image-examples
-Aprendizado e teste com a lib scikit-image python.
+Aprendizado e teste com a lib [scikit-image python](https://scikit-image.org).
 
 ### 1 - Deconvolução de imagem
   Neste exemplo, deconvolvemos uma versão barulhenta de uma imagem usando Wiener e algoritmos de Wiener não supervisionados. Esses algoritmos são baseados em modelos lineares que não podem restaurar bordas nítidas tanto quanto métodos não lineares (como restauração de TV), mas são muito mais rápidos.
