@@ -23,3 +23,16 @@ Nesta série de exemplos, construímos esses conceitos para mostrar como a trans
 
 - Recupere a diferença de rotação com uma transformação polar
   - Neste exemplo, consideramos o caso simples de duas imagens que diferem apenas no que diz respeito à rotação em torno de um ponto central comum. Ao remapear essas imagens no espaço polar, a diferença de rotação se torna uma diferença de translação simples que pode ser recuperada por correlação de fase.
+
+### 4 - Segmentação de Chan-Vese
+  - O algoritmo de segmentação Chan-Vese é projetado para segmentar objetos sem limites claramente definidos. Este algoritmo é baseado em conjuntos de níveis que são evoluídos iterativamente para minimizar uma energia, que é definida por valores ponderados que correspondem à soma das diferenças de intensidade do valor médio fora da região segmentada, a soma das diferenças do valor médio dentro da região segmentada , e um termo que depende do comprimento do limite da região segmentada.
+
+  - Este algoritmo foi proposto pela primeira vez por Tony Chan e Luminita Vese, em uma publicação intitulada “An Active Contour Model Without Edges” 1. Ver também 2, 3.
+
+  - Esta implementação do algoritmo é um tanto simplificada no sentido de que o fator de área ‘nu’ descrito no artigo original não é implementado e só é adequado para imagens em tons de cinza.
+
+  - Os valores típicos para lambda1 e lambda2 são 1. Se o 'fundo' for muito diferente do objeto segmentado em termos de distribuição (por exemplo, uma imagem preta uniforme com figuras de intensidade variável), então esses valores devem ser diferentes uns dos outros.
+
+  - Os valores típicos para mu estão entre 0 e 1, embora valores mais altos possam ser usados ​​ao lidar com formas com contornos muito mal definidos.
+
+  - O algoritmo também retorna uma lista de valores que corresponde à energia em cada iteração. Isso pode ser usado para ajustar os vários parâmetros descritos acima.
