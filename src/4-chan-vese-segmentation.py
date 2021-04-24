@@ -1,14 +1,15 @@
 import matplotlib.pyplot as plt
-from skimage import data, img_as_float
-from skimage.segmentation import chan_vese
+from skimage import img_as_float
+import skimage.segmentation
 from img import mydata as my
+
 
 image = img_as_float(my.hollywood())
 image = image.sum(-1)
 # print(image)
 # Feel free to play around with the parameters to see how they impact the result
-cv = chan_vese(image, mu=0.25, lambda1=1, lambda2=1, tol=1e-3, max_iter=200,
-               dt=0.5, init_level_set="checkerboard", extended_output=True)
+cv = skimage.segmentation.chan_vese(image, mu=0.25, lambda1=1, lambda2=1, tol=1e-3, max_iter=200,
+                                    dt=0.5, init_level_set="checkerboard", extended_output=True)
 
 fig, axes = plt.subplots(2, 2, figsize=(8, 8))
 ax = axes.flatten()
