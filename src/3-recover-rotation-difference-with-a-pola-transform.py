@@ -9,7 +9,7 @@ from img import mydata as my
 
 
 radius = 705
-angle = 215
+angle = 35
 image = my.retina()
 image = img_as_float(image)
 rotated = rotate(image, angle)

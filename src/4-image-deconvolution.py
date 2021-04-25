@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from img import mydata as my
 from skimage import color, data, restoration
 
-couple = color.rgb2gray(my.neymar())
+couple = color.rgb2gray(my.hollywood())
 from scipy.signal import convolve2d as conv2
 psf = np.ones((5, 5)) / 25
 couple = conv2(couple, psf, 'same')
