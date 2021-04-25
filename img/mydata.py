@@ -43,3 +43,7 @@ def retina():
 
 def devil():
     return io.imread(root + 'devil.png')
+
+
+def bacteria():
+    return io.imread(root + 'bacteria.png')
